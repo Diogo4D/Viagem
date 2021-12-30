@@ -1,0 +1,29 @@
+@media (max-width: 400px) {
+    #header {
+        width: 100%;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    #header .menu {
+        display: none;
+    }
+    #min_menu {
+        display: flex;
+        width: 50px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .avaliacoes .conteiner-cards {
+        padding: 0px;
+    }
+    .avaliacoes .card_avaliacoes{
+        margin: 15px 0px;
+        padding: 10px;
+    }
+
+    #comentarios a {
+        width: 100px;
+        text-align: center;
+    }
+}
