@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#explore img {
+    height: 100%;
+    width: 100%;
+}
+#explore {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#explore .camada {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) , transparent);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.8), transparent);
+}
+
+#explore #header #logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#explore #header .menu a {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+#explore #header .menu a:hover {
+    font-weight: 550;
+    background-color: white;
+    color: black;
+}
+
+#explore #header a {
+    text-decoration: none;
+    color: white;
+}
+
+#explore .conteiner-texto {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    max-width: 700px;
+    color: white;
+    display: flex;
+}
+#explore .conteiner-texto h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+#explore #Contato {
+    border: 3px solid white;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    transition: .3s;
+    color: white;
+}
+#explore #Contato:hover {
+    background: white;
+    font-weight: 600;
+    color: black;
+}
+
+/* Ofertas */
+
+#ofertas {
+    height: auto;
+    min-height: 70vh;
+    width: 100%;
+}
+
+#ofertas .conteiner-texto {
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+#ofertas .conteiner-cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+    flex-wrap: wrap;
+}
+
+#ofertas .conteiner-cards .card img {
+    width: 100%;
+    min-width: 300px;
+    height: 260px;
+    min-height: 230px;
+}
+
+#ofertas .conteiner-cards .card {
+    position: relative;
+    text-align: center;
+    max-height: 600px;
+    min-height: 400px;
+    min-width: 300px;
+    max-width: 30%;
+    margin: 10px;
+    list-style: none;
+    transition: 1s;
+}
+
+#ofertas .conteiner-cards .card:hover {
+    transition: .3s;
+}
+
+#ofertas .conteiner-cards .card:hover::after {
+    content: 'R$ 1000,00';
+    animation-name: preco;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    height: 30px;
+}
+#ofertas .conteiner-cards .card:nth-child(2):hover::after {
+    content: 'R$ 1500,00';
+}
+#ofertas .conteiner-cards .card:nth-child(3):hover::after {
+    content: 'R$ 2000,00';
+}
+
+@keyframes preco {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        opacity: 100%;
+        width: 100%;
+        left: 0px;
+    }
+}
+
+/* Avalie nos */
+
+.avaliacoes img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+}
+
+.avaliacoes {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(imagens/grecia.jpg);
+    background-size: cover;
+}
+
+.avaliacoes .h2 {
+    width: 100%;
+    height: 50px;
+    margin: 20px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.avaliacoes .conteiner-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 0px 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8),rgba(0, 0, 0, .5), transparent);
+}
+
+.avaliacoes .card_avaliacoes {
+    display: grid;
+    width: 25%;
+    height: 300px;
+    min-width: 290px;
+    color: white;
+    margin: 15px;
+}
+
+.avaliacoes .card_avaliacoes .icon {
+    padding: 20px;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.avaliacoes .card_avaliacoes h2 {
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+.avaliacoes .card_avaliacoes p {
+    font-size: 1rem;
+}
+
+/* comentarios */
+
+#comentarios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 100px;
+}
+
+#comentarios .titulo {
+    font-size: 2.3rem;
+    margin-top: 20px;
+}
+
+#comentarios .aspas {
+    height: 200px;
+    font-size: 20rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#comentarios h4 {
+    width: 600px;
+    text-align: center;
+}
+
+
+#comentarios a {
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+#comentarios a:hover {
+    border: 1px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#footer {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
