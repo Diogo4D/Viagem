@@ -60,20 +60,20 @@ html {
     font-weight: 600;
 }
 
-#explore #header .menu a {
+#header .menu a {
     padding: 5px 10px;
     margin: 0px 10px;
     border-radius: 10px;
     transition: .3s;
 }
 
-#explore #header .menu a:hover {
+#header .menu a:hover {
     font-weight: 550;
     background-color: white;
     color: black;
 }
 
-#explore #header a {
+#header a {
     text-decoration: none;
     color: white;
 }
